@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <title>Vacunacion COVID</title>
 </head>
 <body>
-    <header>
-        <h1> CREANDO LA PRIMERA PAGINA WEB</h1>
-    </header>
 
-    <div>
-        <p>
-            Estamos aprendiendo a usar git y github
-        </p>
-    </div>
-
-    <div>
-        <p>Haciendo el segundo commit</p>
-    </div>
-    
+   <h1>Registro para Vacunación COVID-19</h1>
+   <div class="formulario">
+       <form>
+           Nombre: <input type="text" name="nombre" required=""><br><br>
+           Apellido: <input type="text" name="apellido" required=""><br><br>
+           Sexo: <input type="radio" name="hombre"> Hombre <input type="radio" name="mujer"> Mujer<br><br>
+           Correo: <input type="email" name="correo" required=""><br><br>
+           Contraseña: <input type="password" name="contraseña" required=""><br><br>
+           <input type="checkbox" name="Autorizaicion" required="">Declaro haber leido y acepto las condiciones generales del programa y la normativa sobre proteccion de datos<br><br>
+           <input type="submit">
+        </form>
+   </div>
+   
+   
 </body>
 </html>

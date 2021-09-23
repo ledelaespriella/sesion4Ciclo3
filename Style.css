@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+
+}
+
+.formulario{
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 50%;
+}
