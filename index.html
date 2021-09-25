@@ -12,13 +12,19 @@
    <h1>Registro para Vacunación COVID-19</h1>
    <div class="formulario">
        <form>
-           Nombre: <input type="text" name="nombre" required=""><br><br>
-           Apellido: <input type="text" name="apellido" required=""><br><br>
-           Sexo: <input type="radio" name="hombre"> Hombre <input type="radio" name="mujer"> Mujer<br><br>
-           Correo: <input type="email" name="correo" required=""><br><br>
-           Contraseña: <input type="password" name="contraseña" required=""><br><br>
-           <input type="checkbox" name="Autorizaicion" required="">Declaro haber leido y acepto las condiciones generales del programa y la normativa sobre proteccion de datos<br><br>
-           <input type="submit">
+           <label>Nombre: </label><input type="text" name="nombre" required="">
+           <br><br>
+           <label>Apellido: </label><input type="text" name="apellido" required="">
+           <br><br>
+           <label>Sexo: </label><input type="radio" name="sexo"><label>Hombre</label><input type="radio" name="sexo"><label>Mujer</label>
+           <br><br>
+           <label>Correo: </label><input type="email" name="correo" required="">
+           <br><br>
+           <label>Contraseña: </label><input type="password" name="contraseña" required="">
+           <br><br>
+           <input type="checkbox" name="Autorizaicion" required=""><label class="formulario__labelAutorizacion">Declaro haber leido y acepto las condiciones generales del programa y la normativa sobre proteccion de datos</label>
+           <br><br>
+           <input class="formulario__inputSubmit" type="submit">
         </form>
    </div>
    
