@@ -1,0 +1,38 @@
+h1{
+    font-family: serif;
+    text-align:center;
+    color:#377ba8;
+    background-color: lightgrey;
+    
+}
+
+form{
+    width:350px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color:#ccc;
+
+}
+
+form input{
+    color: rgb(0, 0, 0);;
+}
+
+.formulario__inputSubmit{
+    text-align:center;
+}
+
+.formulario__labelAutorizacion{
+    text-align: justify;
+
+}
+
+.formulario__contenedor__Autorizacion{
+    text-align: justify;
+    margin: 4px;
+}
+
+.formulario__contenedor__input{
+    text-align: center;
+}

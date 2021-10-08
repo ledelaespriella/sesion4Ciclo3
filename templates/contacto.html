@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos/Style.css') }}">
+    <title></title>
+</head>
+<body>
+
+    <div class="formularios">
+        <form action="" method="POST" novalidate>
+            {{ form.hidden_tag() }} <!--Seguridad Trae los token que el formulario genere-->
+            <p>
+                {{form.nombre.label}}<br>
+                {{form.nombre(size=30)}}<br>
+                {%for error in form.nombre.errors%}
+                    <span style="color: red">{{error}}</span>
+                {%endfor%}
+            </p> 
+            <p>
+                {{form.correo.label}}<br>
+                {{form.correo(size=30)}}<br>
+
+                <!--El error es automatico en la clase formulario-->
+                {%for error in form.correo.errors%}
+                    <span style="color: red">{{error}}</span>
+                {%endfor%}
+            </p>
+            <div>
+                <p>
+                    {{form.mensaje.label}}<br>
+                    {{form.mensaje(size=60)}}<br>
+                </p>
+
+            </div>
+            
+            <p>
+                {{form.enviar()}}
+            </p>
+        </form>
+    </div>
+    
+    
+</body>
+</html>

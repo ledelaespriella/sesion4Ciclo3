@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos/Style.css') }}">
+    <title>Vacunacion COVID</title>
+</head>
+
+<body>
+
+    <section>
+        {% for message in get_flashed_messages() %}
+            <div class="flash"> {{message}}   </div>
+        {%endfor%}
+    </section>
+
+    <h1>Registro para Vacunación COVID-19</h1>
+    <div class="formularios">
+        <form action="{{ url_for('register') }}" method="POST" name="formRegistro" onsubmit="validarFormulario()">
+            <label for="nombre">Nombre: </label><input id="nombre" type="text" name="nombre" required="">
+            <br><br>
+            <label for="apellido">Apellido: </label><input type="text" name="apellido" id="apellido" required="">
+            <br><br>
+            <label for="sexo">Sexo: </label><input id="sexo" type="radio" name="sexo"
+                value="hombre"><label>Hombre</label><input type="radio" name="sexo" value="hombre"><label>Mujer</label>
+            <br><br>
+            <label for="correo">Correo: </label><input id="correo" type="email" name="correo" required="">
+            <br><br>
+            <div class="contenedor-contraseña">
+                <label for="contraseña">Contraseña: </label>
+                <input id="contraseña" type="password" name="contrasena"required="">
+                <img src="{{ url_for('static', filename='IMAGENES/view.png')}}  " alt="" onmouseover="mostrarPassword();" onmouseout="ocultarPassword();">
+            </div>
+            <br><br>
+            <div class="formulario__contenedor__Autorizacion">
+                <input id="Autorizacion" type="checkbox" name="Autorizaicion" required=""><label for="Autorizacion"
+                    class="formulario__labelAutorizacion">Declaro haber leido y acepto las condiciones generales del
+                    programa y la normativa sobre proteccion de datos</label>
+            </div>
+            <br><br>
+            <div class="formulario__contenedor__input">
+                <input class="formulario__inputSubmit" type="submit">
+            </div>
+
+        </form>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='script/scripts.js') }}"></script>
+</body>
+
+</html>
